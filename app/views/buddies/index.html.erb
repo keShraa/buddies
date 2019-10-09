@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="text-center">
+    <h1 class="my-4">Change your life</h1>
+    <p>#Batch 325 - Learn how to code with your buddy</p>
+  </div>
+  <hr>
+</div>
+  <div class="d-flex">
+    <div class="left">
+      <h3 class="m-3 text-white">Your TA for today</h3>
+      <% @ta.each do |ta| %>
+        <div class="card-trip">
+          <%= image_tag ta.url %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= ta.name %></h2>
+              <p><%= ta.age %> years old</p>
+            </div>
+            <h2 class="card-trip-pricing">Batch <%= ta.batch %></h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="right">
+      <% arrow = true %>
+      <% @buddies.each do |two_buddies| %>
+        <div class="row d-flex justify-content-center align-items-center">
+        <% two_buddies.each do |buddy| %>
+          <%= link_to buddy_path(buddy) do %>
+          <div class="card-trip">
+            <%= image_tag buddy.url %>
+            <div class="card-trip-infos">
+              <div>
+                <h2><%= buddy.name %></h2>
+                <p><%= buddy.age %> years old</p>
+              </div>
+              <h2 class="card-trip-pricing">Batch <%= buddy.batch %></h2>
+            </div>
+          </div>
+          <% end %>
+          <% if arrow %>
+            <i class="fas fa-arrows-alt-h"></i>
+            <% arrow = false %>
+          <% else %>
+            <% arrow = true %>
+          <% end %>
+        <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

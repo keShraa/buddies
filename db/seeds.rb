@@ -197,10 +197,12 @@ user_profiles = [
   }
 ]
 
-puts "Creating #{user_profiles.size} buddies..."
+puts "Deleting DB..."
+Buddy.delete_all
 
+puts "Creating #{user_profiles.size} buddies..."
 user_profiles.each do |user|
-  Buddy.new(user)
+  Buddy.create(user)
   puts "#{user[:name]} has been created!"
 end
 

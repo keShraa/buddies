@@ -1,0 +1,8 @@
+<div class="container text-center m-5">
+  <h2><%= @buddy.name %></h2>
+  <%= image_tag @buddy.url, class: 'avatar-large' %>
+  <p>
+    <%= @buddy.age %> years old - Batch #<%= @buddy.batch %>
+  </p>
+  <%= link_to 'Every buddies', buddies_path, class: 'btn btn-gradient' %>
+</div>
