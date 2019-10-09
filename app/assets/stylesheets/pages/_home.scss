@@ -1,1 +1,10 @@
-// Specific CSS for your home-page
+.home {
+  height: 100vh;
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+  url('https://c.wallhere.com/photos/fe/7c/Dragon_Ball_Son_Goku_Vegeta_anime_boys_anime-1362633.jpg!d');
+  color: white;
+  h1 {
+    font-family: 'Sedgwick Ave', cursive;
+    font-size: 48px;
+  }
+}

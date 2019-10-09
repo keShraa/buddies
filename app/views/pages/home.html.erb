@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home d-flex justify-content-center align-self-center flex-column">
+  <div class="container text-center">
+    <h1>Who's gonna be your buddy for today ?</h1>
+    <%= link_to 'Find out', buddies_path, class: 'btn btn-gradient' %>
+  </div>
+</div>
